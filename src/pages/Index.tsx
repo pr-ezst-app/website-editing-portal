@@ -1,8 +1,6 @@
 import { useState, useMemo } from "react";
 import Icon from "@/components/ui/icon";
 
-const HERO_IMG = "https://cdn.ezst.app/projects/9a311ff7-f911-4ab9-9fe9-08ca557e710a/files/8b4299af-eec1-4cb5-b408-9def6a5ce8be.jpg";
-
 const PRODUCTS = [
   {
     id: 1,
@@ -74,7 +72,7 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-white text-black">
       {/* NAV */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-black/8">
+      <nav className="sticky top-0 left-0 right-0 z-50 bg-white border-b border-black/10">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <span className="font-display text-3xl tracking-wider">DRIP</span>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
@@ -93,35 +91,6 @@ export default function Index() {
         </div>
       </nav>
 
-      {/* HERO */}
-      <section className="pt-16">
-        <div className="relative h-[90vh] overflow-hidden">
-          <img
-            src={HERO_IMG}
-            alt="Hero"
-            className="w-full h-full object-cover object-top"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-          <div className="absolute bottom-0 left-0 p-10 md:p-16">
-            <p className="text-white/70 text-sm tracking-[0.3em] uppercase mb-3">
-              Summer 2026 Collection
-            </p>
-            <h1 className="font-display text-white text-7xl md:text-[9rem] leading-none tracking-wide">
-              YOUR
-              <br />
-              STYLE.
-            </h1>
-            <a
-              href="#shop"
-              className="inline-flex items-center gap-2 mt-6 bg-white text-black px-8 py-3.5 text-sm font-semibold tracking-widest uppercase hover:bg-black hover:text-white transition-colors duration-300"
-            >
-              Shop Now
-              <Icon name="ArrowRight" size={16} />
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* TICKER */}
       <div className="bg-black text-white py-3 overflow-hidden whitespace-nowrap">
         <span className="inline-block text-xs tracking-[0.2em] font-medium px-8">
@@ -130,7 +99,7 @@ export default function Index() {
       </div>
 
       {/* SHOP */}
-      <section id="shop" className="max-w-7xl mx-auto px-6 py-20">
+      <section id="shop" className="max-w-7xl mx-auto px-6 py-14">
         {/* Header row */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
           <div>
