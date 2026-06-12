@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import Icon from "@/components/ui/icon";
 
-const MONKEY_IMG = "https://cdn.ezst.app/projects/9a311ff7-f911-4ab9-9fe9-08ca557e710a/bucket/a196c255-4845-4e59-b633-7c165dcb9b73.png";
+const MONKEY_IMG = "https://cdn.ezst.app/projects/9a311ff7-f911-4ab9-9fe9-08ca557e710a/bucket/cfec2dbd-d87b-4e73-90d4-b4c5b8d99194.png";
 
 const PRODUCTS = [
   {
@@ -178,20 +178,19 @@ export default function Index() {
                 {/* Image */}
                 <div className="relative overflow-hidden bg-gray-50 aspect-[3/4] mb-4">
                   {p.id === 0 ? (
-                    <div className="product-img w-full h-full bg-black flex items-center justify-center">
+                    <div className="product-img w-full h-full flex items-center justify-center relative overflow-hidden" style={{ background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 70%, #533483 100%)" }}>
+                      <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(circle at 20% 80%, #e94560 0%, transparent 50%), radial-gradient(circle at 80% 20%, #533483 0%, transparent 50%)" }} />
                       <div className="relative flex items-center justify-center w-full h-full">
-                        <svg viewBox="0 0 200 280" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M60,30 Q50,20 30,25 Q10,30 15,55 Q18,70 30,75 L28,120 Q26,160 30,200 L170,200 Q174,160 172,120 L170,75 Q182,70 185,55 Q190,30 170,25 Q150,20 140,30 Q130,15 100,12 Q70,15 60,30 Z" fill="#111" />
-                          <path d="M60,30 Q70,45 100,47 Q130,45 140,30" fill="none" stroke="#222" strokeWidth="1"/>
-                          <path d="M28,120 L172,120 L170,200 L30,200 Z" fill="#0a0a0a"/>
-                          <path d="M30,75 Q50,85 100,87 Q150,85 170,75" fill="none" stroke="#1a1a1a" strokeWidth="1"/>
-                          <rect x="15" y="195" width="170" height="30" rx="2" fill="#0d0d0d"/>
+                        <svg viewBox="0 0 200 280" className="w-full h-full absolute inset-0" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M60,30 Q50,20 30,25 Q10,30 15,55 Q18,70 30,75 L28,120 Q26,160 30,200 L170,200 Q174,160 172,120 L170,75 Q182,70 185,55 Q190,30 170,25 Q150,20 140,30 Q130,15 100,12 Q70,15 60,30 Z" fill="rgba(0,0,0,0.55)" />
+                          <path d="M28,120 L172,120 L170,200 L30,200 Z" fill="rgba(0,0,0,0.45)"/>
+                          <rect x="15" y="195" width="170" height="30" rx="2" fill="rgba(0,0,0,0.5)"/>
                         </svg>
                         <img
                           src={MONKEY_IMG}
                           alt="Monkey graphic"
-                          className="absolute rounded-full object-cover border-2 border-white/10"
-                          style={{ width: "38%", height: "38%", top: "30%", left: "50%", transform: "translateX(-50%)" }}
+                          className="absolute object-contain drop-shadow-2xl"
+                          style={{ width: "52%", height: "52%", top: "22%", left: "50%", transform: "translateX(-50%)", filter: "drop-shadow(0 0 18px rgba(233,69,96,0.4))" }}
                         />
                       </div>
                     </div>
