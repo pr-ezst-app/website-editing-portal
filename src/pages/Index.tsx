@@ -177,11 +177,31 @@ export default function Index() {
               >
                 {/* Image */}
                 <div className="relative overflow-hidden bg-gray-50 aspect-[3/4] mb-4">
-                  <img
-                    src={p.img}
-                    alt={p.name}
-                    className="product-img w-full h-full object-cover"
-                  />
+                  {p.id === 0 ? (
+                    <div className="product-img w-full h-full bg-black flex items-center justify-center">
+                      <div className="relative flex items-center justify-center w-full h-full">
+                        <svg viewBox="0 0 200 280" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M60,30 Q50,20 30,25 Q10,30 15,55 Q18,70 30,75 L28,120 Q26,160 30,200 L170,200 Q174,160 172,120 L170,75 Q182,70 185,55 Q190,30 170,25 Q150,20 140,30 Q130,15 100,12 Q70,15 60,30 Z" fill="#111" />
+                          <path d="M60,30 Q70,45 100,47 Q130,45 140,30" fill="none" stroke="#222" strokeWidth="1"/>
+                          <path d="M28,120 L172,120 L170,200 L30,200 Z" fill="#0a0a0a"/>
+                          <path d="M30,75 Q50,85 100,87 Q150,85 170,75" fill="none" stroke="#1a1a1a" strokeWidth="1"/>
+                          <rect x="15" y="195" width="170" height="30" rx="2" fill="#0d0d0d"/>
+                        </svg>
+                        <img
+                          src={MONKEY_IMG}
+                          alt="Monkey graphic"
+                          className="absolute rounded-full object-cover border-2 border-white/10"
+                          style={{ width: "38%", height: "38%", top: "30%", left: "50%", transform: "translateX(-50%)" }}
+                        />
+                      </div>
+                    </div>
+                  ) : (
+                    <img
+                      src={p.img}
+                      alt={p.name}
+                      className="product-img w-full h-full object-cover"
+                    />
+                  )}
                   {p.tag && (
                     <span className="absolute top-3 left-3 bg-black text-white text-[10px] tracking-[0.15em] px-2 py-1 font-semibold">
                       {p.tag}
