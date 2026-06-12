@@ -1,7 +1,17 @@
 import { useState, useMemo } from "react";
 import Icon from "@/components/ui/icon";
 
+const MONKEY_IMG = "https://cdn.ezst.app/projects/9a311ff7-f911-4ab9-9fe9-08ca557e710a/bucket/a196c255-4845-4e59-b633-7c165dcb9b73.png";
+
 const PRODUCTS = [
+  {
+    id: 0,
+    name: "Monkey Graphic Tee",
+    category: "tops",
+    price: 55,
+    tag: "EXCLUSIVE",
+    img: "https://cdn.ezst.app/projects/9a311ff7-f911-4ab9-9fe9-08ca557e710a/files/a525156b-f3e6-4137-a779-7b412e1612ad.jpg",
+  },
   {
     id: 1,
     name: "Oversized Black Tee",
@@ -74,7 +84,10 @@ export default function Index() {
       {/* NAV */}
       <nav className="sticky top-0 left-0 right-0 z-50 bg-white border-b border-black/10">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <span className="font-display text-3xl tracking-wider">DRIP</span>
+          <div className="flex items-center gap-2.5">
+            <img src={MONKEY_IMG} alt="Mascot" className="w-9 h-9 rounded-full object-cover border-2 border-black" />
+            <span className="font-display text-3xl tracking-wider">DRIP</span>
+          </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
             <a href="#shop" className="hover:opacity-50 transition-opacity">SHOP</a>
             <a href="#" className="hover:opacity-50 transition-opacity">LOOKBOOK</a>
@@ -200,7 +213,10 @@ export default function Index() {
       <footer className="border-t border-black/10 mt-10">
         <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-start gap-8">
           <div>
-            <span className="font-display text-4xl tracking-wider">DRIP</span>
+            <div className="flex items-center gap-2.5 mb-2">
+              <img src={MONKEY_IMG} alt="Mascot" className="w-8 h-8 rounded-full object-cover border-2 border-black" />
+              <span className="font-display text-4xl tracking-wider">DRIP</span>
+            </div>
             <p className="text-xs text-gray-400 mt-2 max-w-xs leading-relaxed">
               Premium streetwear for the style-forward generation. Inspired by culture, made for the streets.
             </p>
