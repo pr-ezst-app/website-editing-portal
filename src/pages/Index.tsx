@@ -10,7 +10,7 @@ const PRODUCTS = [
     category: "tops",
     price: 55,
     tag: "EXCLUSIVE",
-    img: "https://cdn.ezst.app/projects/9a311ff7-f911-4ab9-9fe9-08ca557e710a/bucket/a196c255-4845-4e59-b633-7c165dcb9b73.png",
+    img: "https://cdn.ezst.app/projects/9a311ff7-f911-4ab9-9fe9-08ca557e710a/files/f111ae8e-489d-496a-8754-0dfbc31c2aac.jpg",
   },
   {
     id: 1,
