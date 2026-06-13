@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import Icon from "@/components/ui/icon";
 
-const MONKEY_IMG = "https://cdn.ezst.app/projects/9a311ff7-f911-4ab9-9fe9-08ca557e710a/bucket/f340726c-8b48-4fd4-836f-f0f2f49d48fc.png";
+const MONKEY_IMG = "https://cdn.ezst.app/projects/9a311ff7-f911-4ab9-9fe9-08ca557e710a/bucket/33d04e55-40a9-4446-8e4d-b63f5ab88741.png";
 
 const PRODUCTS = [
   {
